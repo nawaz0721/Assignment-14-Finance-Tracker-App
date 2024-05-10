@@ -14,8 +14,15 @@ function calculateIncome() {
     income.innerText = myIncome;
 
     if (mySaving < 0) {
-        mySaving += myIncomeUpdate;        
+        mySaving += myIncomeUpdate;
         if (mySaving >= 0) {
+            myIncome += mySaving;
+            saving.innerText = mySaving;
+        }
+    } 
+    else if (mySaving > 0) {
+        mySaving += myIncomeUpdate;  
+        if (mySaving <= 0) {
             myIncome += mySaving;
             saving.innerText = mySaving;
         }
